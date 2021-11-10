@@ -1,0 +1,34 @@
+M = 3;
+L = 5;
+x0 = 0.1;
+v0 = 0;
+k = 0.01;
+g = 9.81;
+
+x = x0;
+v = v0;
+t = 0;
+dt = 0.05;
+
+
+
+
+
+
+
+
+
+
+if(x > L) { return; }
+
+m = M/L * x;
+Fz = m * g;
+Fw = ((k * M * g) / L) * (L - x);
+F = Fz - Fw;
+
+if(F < 0) { F = 0; }
+
+a = F/M;
+v = v + a * dt;
+x = x + v * dt;
+t = t + dt;
