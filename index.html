@@ -29,6 +29,7 @@ a = F/M;
 v = v + a * dt;
 x = x + v * dt;
 t = t + dt;</textarea>
+			<input name="iterations" id="iteration-input" type="number" placeholder="Iteraties" oninput="updateIterations(this.value)"/>
 			<button id="run-button" class="button" onclick="runModel()">Run model</button>
 			<div id="tracked-vars">
 				<span>Variabelen</span><br/>

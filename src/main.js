@@ -3,8 +3,8 @@ const runs = [];
 
 let iterations = 10000;
 let index = 0;
-function updateIterations(element) {
-	iterations = element.value;
+function updateIterations(amount) {
+	iterations = parseInt(amount);
 }
 
 let rounding = 2;
