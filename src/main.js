@@ -24,6 +24,17 @@ window.addEventListener('load', () => {
 		}
 	}
 });
+window.addEventListener('resize', () => {
+	const container = document.getElementsByClassName('chart-container')[0];
+	const containerStyle = window.getComputedStyle(container);
+	const columns = parseInt(containerStyle["grid-column-end"])-parseInt(containerStyle["grid-column-start"]);
+
+	const gridStyle = window.getComputedStyle(document.getElementById('main-ui'));
+	const columnWidth = parseFloat(gridStyle["grid-template-columns"].split('px')[0]);
+	const columnGap = parseFloat(gridStyle["column-gap"].split('px')[0]);
+
+	container.style.width = (columns*(columnWidth+columnGap))+'px';
+});
 
 function runModel() {
 	Function(variableInput.value)();

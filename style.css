@@ -105,4 +105,5 @@ textarea{
 .chart-container{
 	grid-column: 9/25;
 	grid-row: 1/21;
+	position: relative;
 }
