@@ -24,45 +24,55 @@ const plot = new Chart(document.getElementById('plot').getContext('2d'), {
 				bottom: 0
 			}
 		},
-		legend: {
-			display: false
+		plugins: {
+			legend: {
+				display: false
+			}
 		},
 		scales: {
-			yAxes: [{
-				gridLines: {
+			x: {
+				type: 'linear',
+				position: 'bottom',
+				title: {
+					display: true,
+					color: '#FFF',
+					font: {
+						size: 13
+					}
+				},
+				grid: {
+					color: '#444',
+					drawBorder: true
+				},
+				ticks: {
+					color: '#FFF',
+					font: {
+						size: 13
+					}
+				}
+			},
+			y: {
+				type: 'linear',
+				title: {
+					display: true,
+					color: '#FFF',
+					font: {
+						size: 13
+					}
+				},
+				grid: {
 					color: '#444',
 					drawBorder: true,
 					zeroLineColor: '#444'
-				},
-				scaleLabel: {
-					display: true,
-					fontSize: 13,
-					fontColor: '#FFF'
 				},
 				ticks: {
 					beginAtZero: true,
-					fontSize: 13,
-					fontColor: '#FFF'
+					color: '#FFF',
+					font: {
+						size: 13
+					}
 				}
-			}],
-			xAxes: [{
-				type: 'linear',
-				position: 'bottom',
-				gridLines: {
-					color: '#444',
-					drawBorder: true,
-					zeroLineColor: '#444'
-				},
-				scaleLabel: {
-					display: true,
-					fontSize: 13,
-					fontColor: '#FFF'
-				},
-				ticks: {
-					fontSize: 13,
-					fontColor: '#FFF'
-				}
-			}]
+			}
 		}
 	}
 });

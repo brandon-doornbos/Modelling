@@ -167,7 +167,7 @@ function displayVar(axis, variable, updatePlot = true) {
 		}
 	}
 
-	plot.options.scales[axis+'Axes'][0].scaleLabel.labelString = variable+' ('+data[variable].unit+')';
+	plot.options.scales[axis].title.text = variable+' ('+data[variable].unit+')';
 	for(let i = 0; i < data[variable].data.length; i++) {
 		if(plot.data.datasets[0].data[i] === undefined) plot.data.datasets[0].data[i] = {x: 0, y: 0};
 		plot.data.datasets[0].data[i][axis] = data[variable].data[i];
